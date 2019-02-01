@@ -4,6 +4,7 @@
  * External dependencies
  */
 import MarkdownIt from 'markdown-it';
+import MarkdownItKaTeX from 'markdown-it-plugin-katex';
 import { RawHTML } from '@wordpress/element';
 
 /**
@@ -15,6 +16,12 @@ import { __ } from 'gutenberg/extensions/presets/gmd/utils/i18n';
  * Module variables
  */
 const markdownConverter = new MarkdownIt();
+
+if ( window.WP_GMD.isKaTeX === 'on' ) {
+	// 启用KaTeX插件
+	markdownConverter.use(MarkdownItKaTeX);
+}
+
 const handleLinkClick = event => {
 	if ( event.target.nodeName === 'A' ) {
 		const hasConfirmed = window.confirm( __( 'Are you sure you wish to leave this page?' ) );

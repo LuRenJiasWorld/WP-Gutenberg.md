@@ -7,3 +7,23 @@
 TODO：
 
 - 插件实现
+
+编译环境：
+
+WSL, Linux, macOS
+
+编译命令：
+
+`npm run sdk -- gutenberg client/gutenberg/extensions/presets/gmd`
+
+```bash
+npm run sdk -- gutenberg client/gutenberg/extensions/presets/gmd && rm -rf /mnt/e/WinNMP/www/wordpress/wp-content/plugins/WP-GMD/assets/editor/editor.* && cp client/gutenberg/extensions/presets/gmd/build/editor.css /mnt/e/WinNMP/www/wordpress/wp-content/plugins/WP-GMD/assets/editor/ && cp client/gutenberg/extensions/presets/gmd/build/editor.js /mnt/e/WinNMP/www/wordpress/wp-content/plugins/WP-GMD/assets/editor/
+```
+
+注意事项：
+
+第一次安装环境，如果需要数学公式支持请在根目录安装：
+
+```bash
+npm i markdown-it-plugin-katex
+```
