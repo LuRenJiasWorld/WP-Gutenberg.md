@@ -5,6 +5,7 @@
  */
 import MarkdownIt from 'markdown-it';
 import MarkdownItKaTeX from 'markdown-it-plugin-katex';
+import MarkdownItMermaid from 'markdown-it-plugin-mermaid/src/index';
 import { RawHTML } from '@wordpress/element';
 
 /**
@@ -21,6 +22,9 @@ if ( window.WP_GMD.isKaTeX === 'on' ) {
 	// 启用KaTeX插件
 	markdownConverter.use(MarkdownItKaTeX);
 }
+
+// 启用Mermaid插件
+markdownConverter.use(MarkdownItMermaid);
 
 const handleLinkClick = event => {
 	if ( event.target.nodeName === 'A' ) {

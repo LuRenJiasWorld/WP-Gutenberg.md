@@ -4,6 +4,7 @@ namespace GMD;
 
 use GMDAdmin\Controller;
 use GMDApp\KaTeX;
+use GMDApp\Mermaid;
 use GMDUtils\Guide;
 use GMDUtils\Internationalization;
 use GMDUtils\PluginMeta;
@@ -84,6 +85,8 @@ class Main {
 
         // 实现KaTeX
         $this->get_opt( 'enable_katex' ) == 'on' ? new KaTeX() : null;
+
+        new Mermaid();
     }
 
     /**

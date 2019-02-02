@@ -22,8 +22,9 @@ npm run sdk -- gutenberg client/gutenberg/extensions/presets/gmd && rm -rf /mnt/
 
 注意事项：
 
-第一次安装环境，如果需要数学公式支持请在根目录安装：
+第一次安装环境，如果需要功能插件支持请在根目录安装：
 
 ```bash
-npm i markdown-it-plugin-katex
+npm i markdown-it-plugin-katex # KaTeX
+npm i markdown-it-plugin-mermaid # mermaid
 ```
