@@ -1,0 +1,23 @@
+{
+  "translation-revision-date": "2019-02-03 22:33:16+0000",
+  "generator": "WP Gutenberg.md/1.0.0",
+  "domain": "gmd",
+  "locale_data": {
+    "gmd": {
+      "": {
+        "domain": "gmd",
+        "plural_forms": "nplurals=1; plural=0;",
+        "lang": "zh_CN"
+      },
+      "Write your _Markdown_ **here**...": [
+        "享受 _Markdown_ 写作的**快感**..."
+      ],
+      "Markdown": [
+        "Markdown"
+      ],
+      "Preview": [
+        "预览"
+      ]
+    }
+  }
+}

@@ -7,7 +7,6 @@ import MarkdownIt from 'markdown-it';
 import MarkdownItKaTeX from 'markdown-it-plugin-katex';
 import MarkdownItMermaid from 'markdown-it-plugin-mermaid';
 import MarkdownItPrism from 'markdown-it-prism';
-//import 'prismjs/components/prism-markup-templating'
 import { RawHTML } from '@wordpress/element';
 
 /**
@@ -35,6 +34,7 @@ markdownConverter.use(MarkdownItPrism, {
 	plugins: [
 	],
 	init: (Prism) => {
+		window.prism = Prism;
 		require('prismjs/components/prism-markup-templating');
 	},
 	defaultLanguage: undefined

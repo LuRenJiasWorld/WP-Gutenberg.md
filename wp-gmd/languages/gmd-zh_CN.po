@@ -1,0 +1,36 @@
+# Translation of WordPress - 4.8.x in LANGUAGE NAME
+# This file is distributed under the same license as the WordPress - 4.8.x package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-02-03 22:33:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Plugins - WP-Gutenberg.md - Development (trunk)\n"
+
+msgid "Syntax Highlighting"
+msgstr "语法高亮"
+
+msgid "Enable Syntax Highlighting"
+msgstr "启用代码语法高亮"
+
+msgid "Line Numbers"
+msgstr "代码行号"
+
+msgid "Show Code Language"
+msgstr "语法类型"
+
+msgid "Copy To Clipboard"
+msgstr "代码复制"
+
+msgid "PrismJS Syntax Highlight Style"
+msgstr "高亮风格"
+
+msgid "Customize Style Library"
+msgstr "自定义高亮风格"
+
+msgid "Get More <a href=\"https://github.com/JaxsonWang/Prism.js-Style\" target=\"_blank\" rel=\"nofollow\">Theme Style</a>"
+msgstr "获取更多<a href=\"https://github.com/JaxsonWang/Prism.js-Style\" target=\"_blank\" rel=\"nofollow\">高亮风格</a>"

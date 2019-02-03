@@ -13,23 +13,20 @@ class Internationalization {
     /**
      * 指定文件夹
      */
-    public function __construct() {
-        $this->domain = 'gmd';
+    public function __construct( $text_domain ) {
+        $this->domain = $text_domain;
         add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));
-
     }
 
     /**
      * 指定文件夹
      */
     public function load_plugin_textdomain() {
-
         load_plugin_textdomain(
             $this->domain,
             false,
-            dirname(dirname(dirname(plugin_basename(__FILE__)))) . '/languages/'
+            dirname(CAT_GMD_NAME) . '/languages/'
         );
-
     }
 
 }

@@ -71,7 +71,7 @@ class Main {
      */
     public function run_core() {
         // 实现国际化
-        new Internationalization();
+        new Internationalization($this->get_text_domain());
 
         new Controller($this->get_plugin_name(), $this->get_plugin_slug(), $this->get_version(), $this->get_text_domain());
 
