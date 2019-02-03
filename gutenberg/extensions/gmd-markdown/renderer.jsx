@@ -5,7 +5,9 @@
  */
 import MarkdownIt from 'markdown-it';
 import MarkdownItKaTeX from 'markdown-it-plugin-katex';
-import MarkdownItMermaid from 'markdown-it-plugin-mermaid/src/index';
+import MarkdownItMermaid from 'markdown-it-plugin-mermaid';
+import MarkdownItPrism from 'markdown-it-prism';
+//import 'prismjs/components/prism-markup-templating'
 import { RawHTML } from '@wordpress/element';
 
 /**
@@ -23,8 +25,20 @@ if ( window.WP_GMD.isKaTeX === 'on' ) {
 	markdownConverter.use(MarkdownItKaTeX);
 }
 
-// 启用Mermaid插件
-markdownConverter.use(MarkdownItMermaid);
+if ( window.WP_GMD.isMermaid === 'on' ) {
+	// 启用Mermaid插件
+	markdownConverter.use(MarkdownItMermaid);
+}
+
+// 启用Prism.js高亮插件
+markdownConverter.use(MarkdownItPrism, {
+	plugins: [
+	],
+	init: (Prism) => {
+		require('prismjs/components/prism-markup-templating');
+	},
+	defaultLanguage: undefined
+});
 
 const handleLinkClick = event => {
 	if ( event.target.nodeName === 'A' ) {

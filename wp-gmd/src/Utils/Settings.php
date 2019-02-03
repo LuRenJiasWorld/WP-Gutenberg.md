@@ -50,6 +50,67 @@ class Settings {
      */
     private function settings_fields() {
 
+        $settings['highlight'] = array(
+            'title'       => __( 'Syntax Highlighting', $this->text_domain ),
+            'description' => __( '', $this->text_domain ),
+            'fields'      => array(
+                array(
+                    'id'          => 'enable_highlight',
+                    'label'       => __( 'Enable Syntax Highlighting', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'checkbox',
+                    'default'     => 'off'
+                ),
+                array(
+                    'id'          => 'line_numbers',
+                    'label'       => __( 'Line Numbers', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'checkbox',
+                    'default'     => 'off'
+                ),
+                array(
+                    'id'          => 'show_language',
+                    'label'       => __( 'Show Code Language', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'checkbox',
+                    'default'     => 'off'
+                ),
+                array(
+                    'id'          => 'copy_clipboard',
+                    'label'       => __( 'Copy To Clipboard', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'checkbox',
+                    'default'     => 'off'
+                ),
+                array(
+                    'id'          => 'highlight_library_style',
+                    'label'       => __( 'PrismJS Syntax Highlight Style', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'select',
+                    'options'     => array(
+                        'default'        => 'Default',
+                        'dark'           => 'Dark',
+                        'funky'          => 'Funky',
+                        'okaidia'        => 'Okaidia',
+                        'twilight'       => 'Twilight',
+                        'coy'            => 'Coy',
+                        'solarizedlight' => 'Solarized Light',
+                        'tomorrow'       => 'Tomorrow Night',
+                        'customize'      => __( 'Customize Style Library', $this->text_domain )
+                    ),
+                    'default'     => 'default'
+                ),
+                array(
+                    'id'          => 'customize_my_style',
+                    'label'       => __( 'Customize Style Library', $this->text_domain ),
+                    'description' => __( 'Get More <a href="https://github.com/JaxsonWang/Prism.js-Style" target="_blank" rel="nofollow">Theme Style</a>', $this->text_domain ),
+                    'type'        => 'text',
+                    'default'     => '',
+                    'placeholder' => __( 'nothing', $this->text_domain )
+                )
+            )
+        );
+
         $settings['katex'] = array(
             'title'       => __( 'KaTeX', $this->text_domain ),
             'description' => __( '', $this->text_domain ),
@@ -57,6 +118,20 @@ class Settings {
                 array(
                     'id'          => 'enable_katex',
                     'label'       => __( 'Enable KaTeX', $this->text_domain ),
+                    'description' => __( '', $this->text_domain ),
+                    'type'        => 'checkbox',
+                    'default'     => 'off'
+                )
+            )
+        );
+
+        $settings['mermaid'] = array(
+            'title'       => __( 'Mermaid', $this->text_domain ),
+            'description' => __( '', $this->text_domain ),
+            'fields'      => array(
+                array(
+                    'id'          => 'enable_mermaid',
+                    'label'       => __( 'Enable Mermaid', $this->text_domain ),
                     'description' => __( '', $this->text_domain ),
                     'type'        => 'checkbox',
                     'default'     => 'off'

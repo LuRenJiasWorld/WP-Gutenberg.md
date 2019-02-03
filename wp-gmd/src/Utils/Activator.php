@@ -14,6 +14,7 @@ class Activator {
     }
 
     public static $defaultOptions = array(
-        'enable_katex' => 'off'
+        'enable_katex' => 'off',
+        'enable_mermaid' => 'off'
     );
 }

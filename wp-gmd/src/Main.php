@@ -5,6 +5,7 @@ namespace GMD;
 use GMDAdmin\Controller;
 use GMDApp\KaTeX;
 use GMDApp\Mermaid;
+use GMDApp\PrismJSAuto;
 use GMDUtils\Guide;
 use GMDUtils\Internationalization;
 use GMDUtils\PluginMeta;
@@ -86,7 +87,11 @@ class Main {
         // 实现KaTeX
         $this->get_opt( 'enable_katex' ) == 'on' ? new KaTeX() : null;
 
-        new Mermaid();
+        // 实现Mermaid
+        $this->get_opt( 'enable_mermaid' ) == 'on' ? new Mermaid() : null;
+
+        // 实现语法高亮
+        $this->get_opt( 'enable_highlight' ) == 'on' ? new PrismJSAuto( $this->get_plugin_slug() ) : null;
     }
 
     /**

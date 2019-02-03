@@ -46,7 +46,7 @@ class Controller {
 	 */
 	public function organic_profile_block() {
 
-	    $style_list = array( 'Editor-Block-Style' );
+	    $style_list = array( 'Editor-Block-Style', 'Editor-Block-Prism' );
 
         if ( ! function_exists( 'register_block_type' ) ) {
             // Gutenberg is not active.
@@ -65,7 +65,16 @@ class Controller {
         // Style - KaTeX
         wp_register_style(
             'Editor-Block-KaTeX',
-            'https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css',
+            '//cdn.jsdelivr.net/npm/katex/dist/katex.min.css',
+            array(), // Dependency to include the CSS after it.
+            $this->version,
+            'all'
+        );
+
+        // Style - Prism
+        wp_register_style(
+            'Editor-Block-Prism',
+            '//cdn.jsdelivr.net/npm/prismjs/themes/prism.css',
             array(), // Dependency to include the CSS after it.
             $this->version,
             'all'
@@ -81,7 +90,8 @@ class Controller {
         );
 
         wp_localize_script( 'Editor-Block-Script', 'WP_GMD', array(
-            'isKaTeX'  => $this->get_opt( 'enable_katex' ) // 科学公式
+            'isKaTeX'  => $this->get_opt( 'enable_katex' ), // 科学公式
+            'isMermaid'  => $this->get_opt( 'enable_mermaid' ), // Mermaid
         ) );
 
         if ( $this->get_opt( 'enable_katex' ) == 'on' ) {

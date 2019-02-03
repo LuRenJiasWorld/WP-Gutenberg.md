@@ -27,4 +27,5 @@ npm run sdk -- gutenberg client/gutenberg/extensions/presets/gmd && rm -rf /mnt/
 ```bash
 npm i markdown-it-plugin-katex # KaTeX
 npm i markdown-it-plugin-mermaid # mermaid
+npm i markdown-it-prism # Prism.js
 ```
